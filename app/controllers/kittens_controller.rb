@@ -3,6 +3,8 @@ class KittensController < ApplicationController
     @kittens = Kitten.all
 
     respond_to do |format|
+      format.html
+
       format.json {render :json => @kittens}
     end
   end
@@ -11,6 +13,8 @@ class KittensController < ApplicationController
     @kitten = Kitten.find(params[:id])
 
     respond_to do |format|
+      format.html
+
       format.json {render :json => @kitten}
     end
   end
@@ -51,7 +55,7 @@ class KittensController < ApplicationController
     @kitten = Kitten.find(params[:id])
     @kitten.destroy
     flash[:success] = 'Kitten was burned alive!!'
-    redirect_to kitten_path, notice: "Kitten was destroyed"
+    redirect_to kittens_path
   end
 
   private
