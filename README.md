@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+We are building a project that will display kitten photos from flickr.com API. https://www.theodinproject.com/lessons/ruby-on-rails-kittens-api
